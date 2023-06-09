@@ -3,10 +3,9 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract CryptoPals is ERC721, Ownable {
+contract CryptoPals is ERC721 {
     using Strings for uint256;
 
     uint256 private _rareTokenIds = 0;
@@ -18,7 +17,7 @@ contract CryptoPals is ERC721, Ownable {
         _baseTokenURI = baseTokenURI;
     }
 
-    function mintRare(address to) public onlyOwner returns (uint256) {
+    function mintRare(address to) public returns (uint256) {
         require(_rareTokenIds < 500, "All rare tokens have been minted");
 
         _rareTokenIds += 1;
@@ -27,7 +26,7 @@ contract CryptoPals is ERC721, Ownable {
         return _rareTokenIds;
     }
 
-    function mintCommon(address to) public onlyOwner returns (uint256) {
+    function mintCommon(address to) public returns (uint256) {
         require(_commonTokenIds < 1000, "All common tokens have been minted");
 
         _commonTokenIds += 1;

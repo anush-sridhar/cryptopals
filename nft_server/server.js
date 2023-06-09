@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 const alchemyProjectId = process.env.ALCHEMY_PROJECT_ID;
 const web3 = new Web3(new Web3.providers.HttpProvider(`https://polygon-mumbai.g.alchemy.com/v2/${alchemyProjectId}`));
 
-const contractAddress = '0xb49Be80fE5d0f204707eFDAF750182edb2E3C5Ea';
+const contractAddress = '0x6774A2d49659AF361AD02b137dCA034CB241b47E';
 const nftContract = new web3.eth.Contract(contractABI, contractAddress);
 
 const folderCID = "QmRDrUSA7PPdBo7SSvtTn8HbEhy5ESDrezeBN2fxMwLrhG";

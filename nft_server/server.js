@@ -1,7 +1,7 @@
 const express = require('express');
 const Web3 = require('web3');
 const dotenv = require('dotenv');
-const contractABI = require("./build/contracts/CryptoPals.json").abi;
+const contractABI = require("../build/contracts/CryptoPals.json").abi;
 const axios = require("axios");
 
 dotenv.config();

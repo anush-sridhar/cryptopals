@@ -25,8 +25,8 @@ const nftContract = new web3.eth.Contract(contractABI, contractAddress);
 const folderCID = "QmRDrUSA7PPdBo7SSvtTn8HbEhy5ESDrezeBN2fxMwLrhG";
 const numberOfNFTs = 1000;
 
-let mintedRareTokens = new Set(Array.from({length: 5}, (_, i) => i + 1)); // Considering 5 rare tokens already minted
-let mintedCommonTokens = new Set(Array.from({length: 5}, (_, i) => i + 501)); // Considering 5 common tokens already minted
+let mintedRareTokens = new Set(Array.from({length: 30}, (_, i) => i + 1));
+let mintedCommonTokens = new Set(Array.from({length: 19}, (_, i) => i + 500));
 
 async function mintNFT(recipient, isRare) {
   const privateKey = process.env.MINTER_PRIVATE_KEY;
